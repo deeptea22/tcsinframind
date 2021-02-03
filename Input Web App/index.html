@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head><title> Customer feedback </title> 
+<link href ="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+<link rel="stylesheet" href="  index1.css ">
+<link rel="stylesheet" href="  login.css ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-family: 'Sofia';font-size: 22px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div id="div1" class="head">
+  <div class="d1">
+    <a href="index.html" id="navlink">Company Name </a>   
+  </div>
+  <div class="head2">
+       <div class="d3">
+         <button class="open-button" onclick="openForm()">Login</button>
+       </div>
+       <div class="d4">
+    <a href="SignUp.html" id="navlink">Signup </a>   
+  </div>
+       </div>
+  </div>
+  
+ <div id="background">
+    <div class="form-popup" id="myForm">
+     <form action="/action_page.php" class="form-container">
+      <div class="imgcontainer">
+      <span onclick="closeForm()" class="close">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+       <input type="text" placeholder="Enter Email" name="email" required>
+       <input type="password" placeholder="Enter Password" name="psw" required>
+       <button type="submit" class="btn">Login</button>
+       <label><input type="checkbox" checked="checked" name="remember" > Remember me</label>
+       <span class="psw"><a href="#">Forgot password?</a></span>
+       <span class="pswd">Don't have an id?<a href="SignUp.html" id="navlink"> Sign Up here</a>  
+       </form>
+      </div>
+      <div id="bg-text">
+           <h1 id="bg-subheading">We know<br>
+            Your thought matters...<br>
+	   <p          </p>
+            Help us to serve you better<br>
+	   <form action="custreview.html">
+	   <input type="submit" value="Rate now" id="button" ></h1>
+	   </form>
+       </div>
+ </div>
+
+<div class="body1">
+   <div class="d5">
+      <a href="outcome.php">
+      <img src="feedback_analysis.png"  id="img1">
+      </a>
+    </div>
+</div>
+<div class="foot">
+<h1> </h1>
+</div>
+</div>
+<script>
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+
+</html>

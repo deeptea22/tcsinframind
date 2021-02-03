@@ -1,0 +1,173 @@
+body{
+  background-color:lightblue
+}
+h1{
+  text-align:center;
+  color: black;
+  height:20px;
+  padding:0px 0px;
+  margin-bottom:0px;
+  margin-top:0px;
+  text-decoration:underline;
+}
+h2{
+  text-align: center;
+}
+.text{
+position:absolute;
+margin-top:150px;
+}
+.d1{
+  background-color:thistle;
+  border:2px solid;
+  height:130px;
+}
+.rate {
+float:left;
+margin-left:150px;
+  width: 100px;
+  height: 100px;
+}
+.emoji {
+  font-size: 100px;
+  height: 140px;
+  text-align:center;
+}
+input {
+  cursor: pointer;   
+}
+#review{
+  cursor: text;
+  width: 500px;
+  height:150px;
+  background-color:lightblue;
+  border:3px solid;
+  outline:none;
+  resize:none;
+}
+#review:hover{
+  background-color:pink;
+}
+textarea::placeholder{
+  color:black;
+  font-size:15px
+}
+.container {
+
+float:right;
+}
+
+.box {
+  position: relative;
+  background-color:pink;
+  width: 100%;
+
+}
+
+.box-header {
+  color: #000;
+  display: block;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #FFC0CB;
+  margin-bottom: 10px;
+
+}
+
+.box-tools {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+
+}
+
+.dropzone-wrapper {
+  border: 2px dashed #000;
+  color: #000;
+  position: relative;
+  height: 80px;
+
+}
+
+.dropzone-desc {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 40%;
+  top: 10px;
+  font-size: 16px;
+
+}
+
+.dropzone,
+.dropzone:focus {
+  position: absolute;
+  outline: none !important;
+  width: 80%;
+  height: 100px;
+  cursor: pointer;
+  opacity: 0;
+
+}
+
+.dropzone-wrapper:hover,
+.dropzone-wrapper.dragover {
+  background-color: pink;
+
+}
+
+.preview-zone {
+  text-align: center;
+
+}
+
+.preview-zone .box {
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.submit{
+  margin-top: 45px;
+  width: 120px;
+  height: 30px;
+  background-color:pink;
+  outline:none;
+  box-shadow:none;
+  margin-left: 200px;
+}
+
+input[type='radio']:after {
+        width: 10px;
+        height: 10px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: darkTurquoise;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+input[type='radio']:checked:after {
+        width: 10px;
+        height: 10px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #ffa500;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+.button{
+  width: 420px;
+  font-size:20px;
+  border: 2px dashed black;
+margin-left:50px;
+position:absolute;
+}

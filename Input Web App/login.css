@@ -1,0 +1,130 @@
+input[type=text], input[type=password] {
+  width: 85%;
+  padding: 10px;
+  margin: 5px 0 12px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=checkbox] {
+  padding: 10px;
+  float:left;
+  font-size:18px;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color:blue ;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+.open-button {
+  float:right;
+  background-color: #555;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  font-family:sofia;
+  font-size:20px;
+}
+
+.form-popup {
+  display: none;
+  background-color: white;
+  position: fixed;
+  top: 10px;
+  right: 45px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  font-size:15px;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  float:left;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 4px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.psw {
+  float: right;
+ 
+}
+.pswd {
+  background-color:white;
+  padding:10px;
+  float: left;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}

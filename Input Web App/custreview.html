@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="index.css">	
+        <title> YOurReviews </title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="d1">
+    <h1> FeedBack </h1>    
+    <h2> Thank You for shopping with us!</h2>
+    <h2> We hope you are enjoying your recent purchase!  Go Ahead, Share your experience! </h2>
+    </div>    
+  <section>
+  <form action="updated.php" method="POST" enctype="multipart/form-data">
+    <div class="rate">
+	    <div class="emoji">😑</div>
+	    <input type="range" min="0" max="4" step="1" name="emoji">
+    </div>
+    <div class ="text">
+    <h2 id="h2id"> What would you like to share with us? </h2>
+    <textarea id="review" placeholder="Write Down Your Thoughts Here" name="feedback"></textarea>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <h3> Upload File </h3>
+            <div class="preview-zone hidden">
+              <div class="box box-solid">
+                <div class="box-header with-border">
+                  <div><b>Preview</b></div>
+                  <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-danger btn-xs remove-preview">
+                      <i class="fa fa-times"></i> Reset This Form
+                    </button>
+                  </div>
+                </div>
+                <div class="box-body"></div>
+              </div>
+            </div>
+            <div class="dropzone-wrapper">
+              <div class="dropzone-desc">
+                <i class="glyphicon glyphicon-download-alt"></i>
+                <p>Click to choose an image file or drag it here.</p>
+              </div>
+              <input type="file" name="image" class="dropzone">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2> How likely are you to recommend us to a friend? </h2>
+          <div class = "button">
+          <input type="radio" name="b1" value="1"/>
+          <label for="1">1</label>
+          <input type="radio" name="b1" value="2"/>
+          <label for="b2">2</label>
+          <input type="radio" name="b1" value="3"/>
+          <label for="b3">3</label>
+          <input type="radio" name="b1" value="4"/>
+          <label for="b4">4</label>
+          <input type="radio" name="b1" value="5"/>
+          <label for="b5">5</label>
+          <input type="radio" name="b1" value="6"/>
+          <label for="b6">6</label>
+          <input type="radio" name="b1" value="7"/>
+          <label for="b7">7</label>
+          <input type="radio" name="b1" value="8"/>
+          <label for="b8">8</label>
+          <input type="radio" name="b1" value="9"/>
+          <label for="b9">9</label>
+          <input type="radio" name="b1" value="10"/>
+          <label for="b10">10</label>	   
+    </div>
+        <input type="submit" class="submit" value="Submit" />    
+  </form>
+</section>
+  </body>
+</html>
+<script>
+var emojis = ['😠','😦','😑','😀','😍'];
+
+$("input[type='range'").mousemove(function(){
+	var i = $(this).val();
+	$(".emoji").html(emojis[i]);
+});
+function readFile(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      var htmlPreview =
+        '<img width="40" src="' + e.target.result + '" />' +
+        '<p>' + input.files[0].name + '</p>';
+      var wrapperZone = $(input).parent();
+      var previewZone = $(input).parent().parent().find('.preview-zone');
+      var boxZone = $(input).parent().parent().find('.preview-zone').find('.box').find('.box-body');
+
+      wrapperZone.removeClass('dragover');
+      previewZone.removeClass('hidden');
+      boxZone.empty();
+      boxZone.append(htmlPreview);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function reset(e) {
+  e.wrap('<form>').closest('form').get(0).reset();
+  e.unwrap();
+}
+
+$(".dropzone").change(function() {
+  readFile(this);
+});
+
+$('.dropzone-wrapper').on('dragover', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $(this).addClass('dragover');
+});
+
+$('.dropzone-wrapper').on('dragleave', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $(this).removeClass('dragover');
+});
+
+$('.remove-preview').on('click', function() {
+  var boxZone = $(this).parents('.preview-zone').find('.box-body');
+  var previewZone = $(this).parents('.preview-zone');
+  var dropzone = $(this).parents('.form-group').find('.dropzone');
+  boxZone.empty();
+  previewZone.addClass('hidden');
+  reset(dropzone);
+});
+$('textarea').autoResize();
+
+</script>
+<script src="assets/app.js"></script>
